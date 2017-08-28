@@ -75,7 +75,7 @@ then
 fi
 
 # ******************************************************************************
-# First, pack react-scripts and create-react-app so we can use them.
+# First, pack react-scripts and create-bem-react-app so we can use them.
 # ******************************************************************************
 
 # Pack CLI
@@ -112,7 +112,7 @@ cd $temp_app_path
 create_react_app --scripts-version=$scripts_path --internal-testing-template=$root_path/packages/bem-react-scripts/fixtures/kitchensink test-kitchensink
 
 # ******************************************************************************
-# Now that we used create-react-app to create an app depending on react-scripts,
+# Now that we used create-bem-react-app to create an app depending on react-scripts,
 # let's make sure all npm scripts are in the working state.
 # ******************************************************************************
 
