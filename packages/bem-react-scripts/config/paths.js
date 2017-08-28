@@ -14,7 +14,9 @@ const path = require('path');
 const fs = require('fs');
 const url = require('url');
 const bemConfig = require('bem-config')();
-const userOptions = bemConfig.moduleSync('create-bem-react-app');
+// TODO: Fix e2e-simple.sh run, now it get
+// `TypeError: Cannot read property 'publicUrl' of undefined`
+const userOptions = bemConfig.moduleSync('create-bem-react-app') || {};
 const levels = bemConfig.levelMapSync();
 
 // Make sure any symlinks in the project folder are resolved:

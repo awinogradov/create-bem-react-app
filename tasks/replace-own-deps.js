@@ -10,6 +10,8 @@
 
 // Replaces internal dependencies in package.json with local package paths.
 
+'use strict'
+
 const fs = require('fs');
 const path = require('path');
 
