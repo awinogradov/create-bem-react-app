@@ -101,10 +101,10 @@ prompt(
   const ownPackage = require(path.join(ownPath, 'package.json'));
   const appPackage = require(path.join(appPath, 'package.json'));
   const babelConfig = JSON.parse(
-    fs.readFileSync(path.join(ownPath, '.babelrc'), 'utf8')
+    fs.readFileSync(path.join(ownPath, 'babelrc'), 'utf8')
   );
   const eslintConfig = JSON.parse(
-    fs.readFileSync(path.join(ownPath, '.eslintrc'), 'utf8')
+    fs.readFileSync(path.join(ownPath, 'eslintrc'), 'utf8')
   );
 
   console.log(cyan('Updating the dependencies'));
