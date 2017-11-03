@@ -16,6 +16,9 @@ const paths = require('./paths');
 const protocol = process.env.HTTPS === 'true' ? 'https' : 'http';
 const host = process.env.HOST || 'localhost';
 
+// Get setName name, after start app like `npm run start setName`
+const setName = process.argv[2];
+
 module.exports = {
   // Enable gzip compression of generated files.
   compress: true,
@@ -36,7 +39,7 @@ module.exports = {
   // for files like `favicon.ico`, `manifest.json`, and libraries that are
   // for some reason broken when imported through Webpack. If you just want to
   // use an image, put it in `src` and `import` it from JavaScript instead.
-  contentBase: paths.appPublic,
+  contentBase: setName ? `${paths.appBuild}/${setName}` : paths.appBuild,
   // By default files from `contentBase` will not trigger a page reload.
   watchContentBase: true,
   // Enable hot reloading server. It will provide /sockjs-node/ endpoint

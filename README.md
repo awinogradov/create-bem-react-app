@@ -117,9 +117,18 @@ Your app is ready to be deployed!
 Currently it includes something more than original Create React App package:
 
 * [webpack-bem-loader](https://github.com/bem/webpack-bem-loader)
+* [bem/sdk.config](https://github.com/bem/bem-sdk/blob/master/packages/config/README.md#config-example)
 * [babel-plugin-bem-import](https://github.com/bem/babel-plugin-bem-import)
 * [bem-react-core](https://github.com/bem/bem-react-core)
 * [raw-loader](https://github.com/webpack-contrib/raw-loader) includes content of *.inline.* files
+
+## Building multiple bundles
+
+If you want to make several bundles and have their own implementation of blocks, you need to use [sets](https://github.com/bem/bem-sdk/blob/master/packages/config/README.md#config-example)
+
+1. Add sets in ```.bemrc```
+2. Build the project. You can specify some options for [parallel-webpack](https://github.com/trivago/parallel-webpack) (watch, maxRetries, stats)
+3. Run app with ```npm run start set-name```
 
 ## Contributing
 

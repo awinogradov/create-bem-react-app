@@ -33,6 +33,9 @@ const publicUrl = '';
 // Get environment variables to inject into our app.
 const env = getClientEnvironment(publicUrl);
 
+// Get setName name, after start app like `npm run start setName`
+const setName = process.argv[2];
+
 // This is the development configuration.
 // It is focused on developer experience and fast rebuilds.
 // The production configuration is different and lives in a separate file.
@@ -68,13 +71,13 @@ module.exports = {
   ],
   output: {
     // Next line is not used in dev but WebpackDevServer crashes without it:
-    path: paths.appBuild,
+    path: setName ? `${paths.appBuild}/${setName}` : paths.appBuild,
     // Add /* filename */ comments to generated require()s in the output.
     pathinfo: true,
     // This does not produce a real file. It's just the virtual path that is
     // served by WebpackDevServer in development. This is the JS bundle
     // containing code from all our entry points, and the Webpack runtime.
-    filename: 'static/js/bundle.js',
+    filename: setName ? `static/js/${setName}.bundle.js` : `static/js/[name].bundle.js`,
     // This is the URL that app is served from. We use "/" in development.
     publicPath: publicPath,
   },
@@ -232,6 +235,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       inject: true,
       template: paths.appHtml,
+      filename: setName ? `${paths.appBuild}/${setName}/index.html` : `${paths.appBuild}/index.html`,
     }),
     // Makes some environment variables available to the JS code, for example:
     // if (process.env.NODE_ENV === 'development') { ... }. See `./env.js`.

@@ -13,7 +13,7 @@
 const path = require('path');
 const fs = require('fs');
 const url = require('url');
-const bemConfig = require('bem-config')();
+const bemConfig = require('@bem/sdk.config')();
 const userOptions = bemConfig.moduleSync('create-bem-react-app');
 const levels = bemConfig.levelMapSync();
 
@@ -87,6 +87,7 @@ module.exports = {
   appPackageJson: resolveApp(userOptions.appPackageJson),
   appSrc: resolveApp(userOptions.appSrc),
   appLevels: levels,
+  appSets: bemConfig.getSync().sets,
   appTarget: userOptions.target,
   yarnLockFile: resolveApp(userOptions.yarnLockFile),
   testsSetup: resolveApp(userOptions.testsSetup),
@@ -116,6 +117,7 @@ module.exports = {
   appPackageJson: resolveApp(userOptions.appPackageJson),
   appSrc: resolveApp(userOptions.appSrc),
   appLevels: levels,
+  appSets: bemConfig.getSync().sets,
   appTarget: userOptions.target,
   yarnLockFile: resolveApp(userOptions.yarnLockFile),
   testsSetup: resolveApp(userOptions.testsSetup),
