@@ -73,7 +73,7 @@ then
 fi
 
 # ******************************************************************************
-# First, pack and install create-react-app.
+# First, pack and install create-bem-react-app.
 # ******************************************************************************
 
 # Pack CLI
