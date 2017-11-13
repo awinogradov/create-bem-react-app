@@ -176,8 +176,7 @@ function getConfig(setName) {
                         {
                             loader: 'webpack-bem-loader',
                             options: {
-                                levels: paths.appLevels,
-                                set: setName,
+                                levels: setName ? paths.appSets[setName] : paths.appLevels,
                                 techs: ['js', 'css']
                             },
                         },
