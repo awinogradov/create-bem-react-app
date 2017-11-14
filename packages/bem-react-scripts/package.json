@@ -32,7 +32,7 @@
     "@babel/preset-env": "^7.0.0-beta.4",
     "babel-preset-react-app": "^2.1.1",
     "babel-runtime": "^6.20.0",
-    "bem-config": "3.2.3",
+    "@bem/sdk.config": "0.0.4",
     "bem-react-core": "0.4.2",
     "case-sensitive-paths-webpack-plugin": "1.1.4",
     "chalk": "1.1.3",
