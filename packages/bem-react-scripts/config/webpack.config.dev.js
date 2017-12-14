@@ -139,7 +139,7 @@ module.exports = {
           {
             loader: 'webpack-bem-loader',
             options: {
-              levels: paths.appLevels,
+              levels: setName ? paths.appSets[setName] : paths.appLevels,
               techs: ['js', 'css'],
             },
           },
