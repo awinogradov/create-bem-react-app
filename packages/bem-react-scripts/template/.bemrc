@@ -1,11 +1,12 @@
 {
     "root": true,
-    "levels": {
-        "src/components": {
+    "levels": [
+        {
+            "path": "src/components",
             "scheme": "nested",
             "default": true
         }
-    },
+    ],
     "modules": {
         "create-bem-react-app": {
             "appPath": ".",
