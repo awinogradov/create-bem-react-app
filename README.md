@@ -1,5 +1,7 @@
 # Create BEM React App [![Build Status](https://travis-ci.org/bem/create-bem-react-app.svg?branch=master)](https://travis-ci.org/bem/create-bem-react-app)
 
+Deprecated in favour of [bem-react-boilerplate](https://github.com/bem/bem-react-boilerplate).
+
 Create BEM React apps with no build configuration.
 
 * [Getting Started](#getting-started) – How to create a new app.
